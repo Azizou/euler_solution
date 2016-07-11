@@ -28,13 +28,15 @@ int main(int argc, char * argv[])
 	//std::cout<<number_length(342)<<std::endl;
 }
 
-int number_length(int number){
+int number_length(int n){
 	int result = 0;
-	if (number > MAX_VALUE)
+	int number = n;
+	if (number >= 1000)
 	{
-		return 0;
+		result += intmap.find(number/1000)->second + intmap.find(1000)->second;
+		number %= 1000; 
 	}
-	if(number > 100){
+	if(number >= 100){
 		result += intmap.find(number/100)->second + intmap.find(100)->second;
 	//	std::cout<<"100"<<std::endl;
 	}
