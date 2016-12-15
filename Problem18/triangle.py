@@ -38,7 +38,9 @@ def load_file(filename):
 	return head[-1][0]
 
 def main():
-	head = load_file('data.in')
+	# head = load_file('data.in')
+	head = load_file('p067_triangle.txt')
+
 	print head.max_sum()
 	print "CT",ct
 
